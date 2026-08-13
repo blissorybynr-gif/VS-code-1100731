@@ -17,6 +17,14 @@
                 <li><a href="blog.html">Blog</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
+            <div class="nav-controls">
+                <button class="theme-toggle">🌙</button>
+                <button class="menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
         </div>
     </nav>
 
@@ -46,12 +54,55 @@
         </div>
     </section>
 
+    <section class="testimonials-section">
+        <h2>What Our Clients Say</h2>
+        <div class="testimonials-carousel">
+            <div class="testimonial-item active">
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+                <p>"Exceptional service and outstanding results. The team delivered exactly what we needed!"</p>
+                <div class="testimonial-author">Sarah Johnson - CEO, Tech Innovations</div>
+            </div>
+
+            <div class="testimonial-item">
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+                <p>"Professional, responsive, and highly skilled. They turned our vision into reality."</p>
+                <div class="testimonial-author">Michael Chen - Founder, Digital Solutions</div>
+            </div>
+
+            <div class="testimonial-item">
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+                <p>"Outstanding quality and attention to detail. Highly recommended for any project!"</p>
+                <div class="testimonial-author">Emily Rodriguez - Director, Creative Agency</div>
+            </div>
+
+            <div class="testimonial-item">
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+                <p>"Great experience from start to finish. The team was always there to support us."</p>
+                <div class="testimonial-author">David Park - Manager, Business Solutions</div>
+            </div>
+
+            <div class="carousel-controls">
+                <button class="carousel-btn" onclick="prevTestimonial()">❮</button>
+                <button class="carousel-btn" onclick="nextTestimonial()">❯</button>
+            </div>
+
+            <div class="carousel-dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+        </div>
+    </section>
+
     <footer class="footer">
         <p>&copy; 2024 My Website. All rights reserved.</p>
         <div class="footer-links">
             <a href="#">Privacy</a> | <a href="#">Terms</a> | <a href="#">Contact</a>
         </div>
     </footer>
+
+    <button id="backToTop" title="Back to top">↑</button>
 
     <script src="script.js"></script>
 </body>
