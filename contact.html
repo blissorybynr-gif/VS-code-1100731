@@ -17,9 +17,14 @@
                 <li><a href="blog.html">Blog</a></li>
                 <li><a href="contact.html" class="active">Contact</a></li>
             </ul>
+            <div class="search-bar">
+                <input type="text" class="search-input" placeholder="Search..." id="searchInput">
+                <button class="search-btn">🔍</button>
+                <div class="search-results" id="searchResults"></div>
+            </div>
             <div class="nav-controls">
-                <button class="theme-toggle">🌙</button>
-                <button class="menu-toggle">
+                <button class="theme-toggle" title="Toggle dark mode">🌙</button>
+                <button class="menu-toggle" title="Toggle menu">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -61,35 +66,40 @@
 
             <div class="contact-form-container">
                 <h2>Send us a Message</h2>
-                <form class="contact-form" onsubmit="handleSubmit(event)">
+                <form class="contact-form" id="contactForm" onsubmit="handleSubmit(event)" novalidate>
                     <div class="form-group">
                         <label for="name">Name *</label>
-                        <input type="text" id="name" name="name" required>
+                        <input type="text" id="name" name="name" data-validate="name" placeholder="Your full name">
+                        <span class="error-message" id="nameError"></span>
                     </div>
 
                     <div class="form-group">
                         <label for="email">Email *</label>
-                        <input type="email" id="email" name="email" required>
+                        <input type="email" id="email" name="email" data-validate="email" placeholder="your@email.com">
+                        <span class="error-message" id="emailError"></span>
                     </div>
 
                     <div class="form-group">
                         <label for="phone">Phone</label>
-                        <input type="tel" id="phone" name="phone">
+                        <input type="tel" id="phone" name="phone" data-validate="phone" placeholder="(123) 456-7890">
+                        <span class="error-message" id="phoneError"></span>
                     </div>
 
                     <div class="form-group">
                         <label for="subject">Subject *</label>
-                        <input type="text" id="subject" name="subject" required>
+                        <input type="text" id="subject" name="subject" data-validate="subject" placeholder="What is this about?">
+                        <span class="error-message" id="subjectError"></span>
                     </div>
 
                     <div class="form-group">
                         <label for="message">Message *</label>
-                        <textarea id="message" name="message" rows="5" required></textarea>
+                        <textarea id="message" name="message" rows="5" data-validate="message" placeholder="Your message here..."></textarea>
+                        <span class="error-message" id="messageError"></span>
                     </div>
 
                     <button type="submit" class="btn">Send Message</button>
                 </form>
-                <div id="form-message"></div>
+                <div id="form-message" class="form-message"></div>
             </div>
         </div>
     </section>
